@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FORMS</title>
+    <link rel="stylesheet" href="content/css/style.css">
+    <script src="content/js/script.js"></script>
+</head>
+<body>
+<!--http://html5doctor.com/demos/forms/forms-example.html-->
+
+<form method="get" action="#" name="registration_form" class="registration_form">
+        <ul>
+            <li>
+                <h2>Registration form</h2>
+                <span class="required_notification">* Denotes Required Field</span>
+            </li>
+            <li>
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" placeholder="John" required>
+            </li>
+            <li>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" placeholder="Doe" required>
+            </li>
+            <li>
+                <label for="brthDate">Date of Birth: </label>
+                <input type="date" name="brthDate" id="brthDate" placeholder="Date" required>
+                <span class="form_hint">Proper format 'dd.mm.yyyy'</span>
+            </li>
+            <li>
+                <label for="mail">E-mail:</label>
+                <input type="email" name="mail" id="mail" placeholder="john.doe@example.com" required>
+                <span class="form_hint">Proper format 'mail@email.com'</span>
+            </li>
+            <li>
+                <label for="website">Your website:</label>
+                <input type="url" name="website" id="website" placeholder="http://john-doe.com" required pattern="(http|https)://.+">
+                <span class="form_hint">Proper format 'http://someaddress.com'</span>
+            </li>
+            <li>
+                <label for="telephone">Telephone number:</label>
+                <input type="tel" name="telephone" id="telephone" placeholder="0991234567" required>
+                <span class="form_hint">Proper format '0823698521'</span>
+            </li>
+            <li class="rbAndCheckbox">
+                Select the technologies: <br/>
+                <input type="checkbox" name="tech" id="html" value="html5"><label for="html">HTML(5)</label>
+                <input type="checkbox" name="tech" id="css" value="css3"><label for="css">CSS(3)</label>
+                <input type="checkbox" name="tech" id="less" value="less"><label for="less">LESS</label>
+                <input type="checkbox" name="tech" id="js" value="js"><label for="js">Javascript</label>
+                <input type="checkbox" name="tech" id="cs" value="csharp"><label for="cs">С#</label>
+                <input type="checkbox" name="tech" id="java" value="java"><label for="java">Java</label>
+                <input type="checkbox" name="tech" id="cpp" value="cpp"><label for="cpp">C++</label>
+                <input type="checkbox" name="tech" id="c" value="c"><label for="c">C</label>
+                <input type="checkbox" name="tech" id="php" value="php"><label for="php">PHP</label>
+                <input type="checkbox" name="tech" id="angular" value="angular"><label for="angular">AngularJS</label>
+                <input type="checkbox" name="tech" id="knockout" value="knockout"><label for="knockout">KnockoutJS</label>
+            </li>
+            <li class="rbAndCheckbox">
+                Select your speciality:<br/>
+                <input type="radio" name="spec" id="fe" value="fe"><label for="fe">Front-End </label><br/>
+                <input type="radio" name="spec" id="be" value="be"><label for="be">Back-End </label><br/>
+                <input type="radio" name="spec" id="fs" value="fs"><label for="fs">Full-Stack </label><br/>
+            </li>
+            <li>
+                Your level in programming:<br/> <input type="range" min="0" max="10" step="1" value="0" name="progSkill"> <span id="progSkillValue"></span>
+            </li>
+            <li>
+                <label for="aboutyou">About you:</label>
+                <textarea name="about" id="AboutYou" cols="40" rows="6" placeholder="About you" required></textarea>
+            </li>
+            <li>
+                <button type="submit" class="submit">Send</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>
